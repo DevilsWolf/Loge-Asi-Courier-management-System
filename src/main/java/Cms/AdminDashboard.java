@@ -409,6 +409,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         jButton5.setText("Click");
 
         jButton13.setText("Click");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jButton14.setText("Click");
 
@@ -525,6 +530,11 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+            // TODO add your handling code here:
+            new UserReg2_ForAdmin_side().setVisible(true);
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
