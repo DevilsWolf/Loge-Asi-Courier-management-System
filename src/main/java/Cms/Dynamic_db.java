@@ -4,10 +4,10 @@
  */
 package Cms;
 
-/**
- *
- * @author Ravan
- */
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
 public class Dynamic_db extends javax.swing.JFrame {
 
     /**
@@ -71,6 +71,11 @@ public class Dynamic_db extends javax.swing.JFrame {
         jButton2.setText("Containers");
 
         jButton3.setText("Shipping list");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Delivered List");
 
@@ -170,6 +175,55 @@ public class Dynamic_db extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    public class JTableExamples {
+        // frame
+
+        JFrame f;
+        // Table
+        JTable j;
+
+        // Constructor
+        JTableExamples() {
+            // Frame initialization
+            f = new JFrame();
+
+            // Frame Title
+            f.setTitle("JTable Example");
+
+            // Data to be displayed in the JTable
+            String[][] data = {
+                {"Kundan Kumar Jha", "4031", "CSE"},
+                {"Anand Jha", "6014", "IT"}
+            };
+
+            // Column Names
+            String[] columnNames = {"Name", "Roll Number", "Department"};
+
+            // Initializing the JTable
+            j = new JTable(data, columnNames);
+            j.setBounds(30, 40, 200, 300);
+
+            // adding it to JScrollPane
+            JScrollPane sp = new JScrollPane(j);
+            f.add(sp);
+            // Frame Size
+            f.setSize(500, 200);
+            // Frame Visible = true
+            f.setVisible(true);
+        }
+
+        // Driver method
+        //public static void main(String[] args) {
+           // new JTableExamples();
+        //}
+    }
+
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new JTableExamples();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

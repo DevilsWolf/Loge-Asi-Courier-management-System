@@ -35,6 +35,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -115,6 +116,9 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel26.setForeground(new java.awt.Color(204, 204, 204));
         jLabel26.setText("Monthly Sales details");
 
+        jLabel27.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel27.setText("Contents");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -134,7 +138,8 @@ public class AdminDashboard extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jButton1)
                             .addComponent(jLabel25)
-                            .addComponent(jLabel26))))
+                            .addComponent(jLabel26)
+                            .addComponent(jLabel27))))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -144,7 +149,9 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(104, 104, 104)
                 .addComponent(jLabel3)
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel27)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
@@ -158,7 +165,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel26)
                 .addGap(37, 37, 37)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(232, 236, 241));
@@ -235,8 +242,9 @@ public class AdminDashboard extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel8)
-                .addGap(47, 47, 47)
+                .addGap(41, 41, 41)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jButton2))
@@ -588,6 +596,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
