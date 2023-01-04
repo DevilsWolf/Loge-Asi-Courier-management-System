@@ -80,6 +80,11 @@ public class Dynamic_db extends javax.swing.JFrame {
         jButton4.setText("Delivered List");
 
         jButton5.setText("Locations");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
@@ -193,12 +198,12 @@ public class Dynamic_db extends javax.swing.JFrame {
 
             // Data to be displayed in the JTable
             String[][] data = {
-                {"Kundan Kumar Jha", "4031", "CSE"},
-                {"Anand Jha", "6014", "IT"}
+                {"Loge Asi", "Bangladesh", "Chittagong", "TSN Complex, Agrabad C/A, Chittagong,Bangladesh."},
+                {"Loge Asi", "Bangladesh", "Chittagong", "Jiban Bima Bhaban ( 4th Floor ), 56, Agrabad Commercial Area"}
             };
 
             // Column Names
-            String[] columnNames = {"Name", "Roll Number", "Department"};
+            String[] columnNames = {"Company Name", "Country", "State", "Location"};
 
             // Initializing the JTable
             j = new JTable(data, columnNames);
@@ -208,22 +213,27 @@ public class Dynamic_db extends javax.swing.JFrame {
             JScrollPane sp = new JScrollPane(j);
             f.add(sp);
             // Frame Size
-            f.setSize(500, 200);
+            f.setSize(1200, 200);
             // Frame Visible = true
             f.setVisible(true);
         }
 
         // Driver method
         //public static void main(String[] args) {
-           // new JTableExamples();
+        // new JTableExamples();
         //}
     }
 
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new JTableExamples();
+        //new JTableExamples();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        new JTableExamples();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
