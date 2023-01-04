@@ -44,7 +44,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Ravan\Documents\NetBeansProjects\mavenproject1\Loading_workman_carrying_boxes_730x500.jpg"/>
+          <Image iconType="2" name="C:\Users\Ravan\Documents\NetBeansProjects\mavenproject1\Images\Loading_workman_carrying_boxes_730x500.jpg"/>
         </Property>
       </Properties>
     </Component>
@@ -59,7 +59,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="245" max="32767" attributes="0"/>
+                  <EmptySpace min="32" pref="245" max="32767" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
               </Group>

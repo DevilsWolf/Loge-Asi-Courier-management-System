@@ -39,7 +39,7 @@ public class Home extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setIconImages(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ravan\\Documents\\NetBeansProjects\\mavenproject1\\Loading_workman_carrying_boxes_730x500.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ravan\\Documents\\NetBeansProjects\\mavenproject1\\Images\\Loading_workman_carrying_boxes_730x500.jpg")); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(113, 77, 105));
 
@@ -65,7 +65,7 @@ public class Home extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(245, Short.MAX_VALUE)
+                .addGap(32, 245, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(243, 243, 243))
             .addGroup(jPanel1Layout.createSequentialGroup()

@@ -157,6 +157,7 @@ public class LandingFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("If you dont have any account,please click on sign me up button below ");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
