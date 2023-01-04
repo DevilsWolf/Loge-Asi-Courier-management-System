@@ -260,8 +260,8 @@ public class LandingFrame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    
-   
+
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         new UserReg().setVisible(true);
@@ -317,9 +317,10 @@ public class LandingFrame extends javax.swing.JFrame {
             // TODO add your handling code here:
             if (verifyUser() == true) {
                 JOptionPane.showMessageDialog(this, "User logged in successfully");
-                AdminDashboard db = new AdminDashboard();
-                db.setVisible(true);
-                this.setVisible(false);
+                //AdminDashboard db = new AdminDashboard();
+                //db.setVisible(true);
+                //this.setVisible(false);
+                new CustomerDashboard().setVisible(true);
 
             } else {
                 JOptionPane.showMessageDialog(this, "Inccorrect credentials. Please try again");
