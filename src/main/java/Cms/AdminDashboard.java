@@ -4,7 +4,16 @@
  */
 package Cms;
 
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.*;
+import javax.swing.table.AbstractTableModel;
 
 public class AdminDashboard extends javax.swing.JFrame {
 
@@ -13,7 +22,7 @@ public class AdminDashboard extends javax.swing.JFrame {
      */
     public AdminDashboard() {
         initComponents();
-        //dispose();
+        
     }
 
     /**
@@ -88,38 +97,38 @@ public class AdminDashboard extends javax.swing.JFrame {
             }
         });
 
-        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ravan\\Documents\\NetBeansProjects\\mavenproject1\\Images\\Admin_Pic.png")); // NOI18N
+        jLabel28.setIcon(new javax.swing.ImageIcon("C:\\Users\\Ravan\\Documents\\NetBeansProjects\\mavenproject1\\Images\\mdhpic2.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(356, 356, 356))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                        .addGap(60, 60, 60)
                         .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jLabel1)))
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 20, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel28))
+                .addGap(17, 17, 17))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addGap(63, 63, 63)
                 .addComponent(jLabel3)
-                .addGap(42, 42, 42)
+                .addGap(48, 48, 48)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -467,7 +476,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -497,10 +506,119 @@ public class AdminDashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         new UserReg2_ForAdmin_side().setVisible(true);
     }//GEN-LAST:event_jButton13ActionPerformed
+    public void createUI() {
+        
 
+        try {
+            JFrame frame = new JFrame();
+            frame.setLayout(new BorderLayout());
+            JTable table = new JTable();
+
+            String readLine = null;
+
+            StudentTableModel tableModel = new StudentTableModel();
+            File file = new File("UserData.txt"/*Give your File Path here*/);
+
+            FileReader reader = new FileReader(file);
+            BufferedReader bufReader = new BufferedReader(reader);
+
+            List<Student> studentList = new ArrayList<Student>();
+            while ((readLine = bufReader.readLine()) != null) {
+                String[] splitData = readLine.split(",");
+
+                Student student = new Student();
+                student.setName(splitData[1]);
+                student.setNumber(splitData[2]);
+
+                studentList.add(student);
+            }
+
+            tableModel.setList(studentList);
+            table.setModel(tableModel);
+
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.add(new JScrollPane(table));
+            frame.setTitle("File to JTable");
+            frame.pack();
+            frame.setVisible(true);
+
+        } catch (IOException ex) {
+        }
+    }
+
+    class Student {
+
+        private String name;
+        private String number;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getNumber() {
+            return number;
+        }
+
+        public void setNumber(String number) {
+            this.number = number;
+        }
+    }
+
+    class StudentTableModel extends AbstractTableModel {
+
+        private List<Student> list = new ArrayList<Student>();
+        private String[] columnNames = {"Username", "Email"};
+
+        public void setList(List<Student> list) {
+            this.list = list;
+            fireTableDataChanged();
+        }
+
+        @Override
+        public String getColumnName(int column) {
+            return columnNames[column];
+        }
+
+        public int getRowCount() {
+            return list.size();
+        }
+
+        public int getColumnCount() {
+            return columnNames.length;
+        }
+
+        public Object getValueAt(int rowIndex, int columnIndex) {
+            switch (columnIndex) {
+                case 0:
+                    return list.get(rowIndex).getName();
+                case 1:
+                    return list.get(rowIndex).getNumber();
+                default:
+                    return null;
+            }
+        }
+    }
+
+    
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        new TxtExplorer().setVisible(true);
+        //new TxtExplorer().setVisible(true);
+        Runnable r = new Runnable() {
+
+            public void run() {
+                new AdminDashboard().createUI();
+                
+            }
+        };
+
+        EventQueue.invokeLater(r);
+        
+    
+        
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -555,8 +673,10 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new AdminDashboard().setVisible(true);
+                
             }
         });
     }
