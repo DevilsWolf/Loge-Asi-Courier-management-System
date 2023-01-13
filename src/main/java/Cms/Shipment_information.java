@@ -29,9 +29,10 @@ public class Shipment_information extends JFrame {
             e.printStackTrace();
         }
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(800, 550);
         setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {

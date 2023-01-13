@@ -18,13 +18,13 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 
-public class DM_All_Driver_List {
+public class UF_Check_User_Queries {
 
     public static void main(String[] args) {
         Runnable r = new Runnable() {
 
             public void run() {
-                new DM_All_Driver_List().createUI();
+                new UF_Check_User_Queries().createUI();
             }
         };
 
@@ -42,7 +42,7 @@ public class DM_All_Driver_List {
             String readLine = null;
 
             StudentTableModel tableModel = new StudentTableModel();
-            File file = new File("DriverData.txt"/*Give your File Path here*/);
+            File file = new File("Contactus.txt"/*Give your File Path here*/);
 
             FileReader reader = new FileReader(file);
             BufferedReader bufReader = new BufferedReader(reader);
@@ -52,8 +52,9 @@ public class DM_All_Driver_List {
                 String[] splitData = readLine.split(",");
 
                 Student student = new Student();
-                student.setName(splitData[0]);
-                student.setNumber(splitData[4]);
+                student.setName(splitData[1]);
+                student.setEmail(splitData[2]);
+                student.setQueries(splitData[4]);
 
                 studentList.add(student);
             }
@@ -63,7 +64,7 @@ public class DM_All_Driver_List {
 
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.add(new JScrollPane(table));
-            frame.setTitle("Showing Driver List");
+            frame.setTitle("Total Sales details");
             frame.pack();
             frame.setVisible(true);
             frame.setLocationRelativeTo(null);
@@ -75,7 +76,8 @@ public class DM_All_Driver_List {
     class Student {
 
         private String name;
-        private String number;
+        private String email;
+        private String queries;
 
         public String getName() {
             return name;
@@ -85,19 +87,28 @@ public class DM_All_Driver_List {
             this.name = name;
         }
 
-        public String getNumber() {
-            return number;
+        public String getEmail() {
+            return email;
         }
 
-        public void setNumber(String number) {
-            this.number = number;
+        public void setEmail(String email) {
+            this.email = email;
         }
+
+        public String getQueries() {
+            return queries;
+        }
+
+        public void setQueries(String queries) {
+            this.queries = queries;
+        }
+
     }
 
     class StudentTableModel extends AbstractTableModel {
 
         private List<Student> list = new ArrayList<Student>();
-        private String[] columnNames = {"Name", "NID"};
+        private String[] columnNames = {"Full Name", "Email", "User Queries"};
 
         public void setList(List<Student> list) {
             this.list = list;
@@ -122,7 +133,9 @@ public class DM_All_Driver_List {
                 case 0:
                     return list.get(rowIndex).getName();
                 case 1:
-                    return list.get(rowIndex).getNumber();
+                    return list.get(rowIndex).getEmail();
+                case 2:
+                    return list.get(rowIndex).getQueries();
                 default:
                     return null;
             }

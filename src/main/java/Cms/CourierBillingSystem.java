@@ -100,7 +100,7 @@ public class CourierBillingSystem extends JFrame implements ActionListener {
         cbxFurnisher.setBounds(150, 350, 200, 30);
         add(cbxFurnisher);
 
-        lblWeight = new JLabel("Weight/kg:");
+        lblWeight = new JLabel("Weight /kg:");
         lblWeight.setBounds(400, 230, 100, 30);
         add(lblWeight);
 
@@ -237,6 +237,13 @@ public class CourierBillingSystem extends JFrame implements ActionListener {
                 bw2.close();
                 fw2.close();
 
+                //Experimental Code ahead
+                //FileWriter fw3 = new FileWriter("BillType.txt", true);
+                //BufferedWriter bw3 = new BufferedWriter(fw3);
+                //bw3.write("\n" + fullName + "/" + email + "/" + pickupLocation + "/" + deliveryLocation + "/" + productType + "/" + weight + "/" + modeOfTransport + "/" + total + "/" + var1);
+                //bw3.close();
+                //fw3.close();
+                //Experimental Code finished
                 JOptionPane.showMessageDialog(null, "Generated Successfully");
             } catch (IOException ex) {
                 ex.printStackTrace();

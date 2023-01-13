@@ -4,6 +4,9 @@
  */
 package Cms;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ravan
@@ -66,10 +69,15 @@ public class CustomerDashboard extends javax.swing.JFrame {
         jLabel17.setText("Check your previous couriers ");
 
         jButton4.setText("Check");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Check Your Invoices ");
+        jLabel4.setText("Print your billing statements");
 
         jButton5.setText("Check");
 
@@ -363,6 +371,14 @@ public class CustomerDashboard extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane optionPane = new JOptionPane("Sorry There is no record of any previous courier", JOptionPane.WARNING_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Couriers");
+        dialog.setAlwaysOnTop(true); // to show top of all other application
+        dialog.setVisible(true); // to visible the dialog
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,3 +1,2 @@
-Sourav Roy,sourav4068@gmail.com,Basabo,Dhaka-1214,Rajshahi,Electronic Device,,2,Van,80.0,7962Rohan,rohan@gmail.com,Mirpur 11,Basabo,Food/Fruits,,5,Bike,300.0,5595
-asd23,32,131,asdasd,Document/Files,,1,Van,40.0,7732
-meow,sad1,41,1412,Document/Files,Furnisher,,10,Air,2040.0,8083
+Hello,@gmail.com,basabo,dhaka,Food/Fruits,,2,Van,120.0,3662
+SouravRoy,sourav4068@gmail.com,basabo,Dhaka,Furnisher,,25,Bus,5000.0,2860
