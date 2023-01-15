@@ -15,12 +15,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
 
-public class LandingFrame extends javax.swing.JFrame {
+public class Landing_Frame extends javax.swing.JFrame {
 
     /**
      * Creates new form LandingForm
      */
-    public LandingFrame() {
+    public Landing_Frame() {
         initComponents();
     }
 
@@ -54,7 +54,6 @@ public class LandingFrame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1300, 750));
 
         jPanel2.setBackground(new java.awt.Color(64, 64, 64));
 
@@ -205,9 +204,6 @@ public class LandingFrame extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(239, 239, 239)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(144, 144, 144)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
@@ -223,16 +219,19 @@ public class LandingFrame extends javax.swing.JFrame {
                                         .addComponent(btnlogin)
                                         .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
+                        .addGap(274, 274, 274)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(296, 296, 296)
                         .addComponent(jButton1)))
                 .addContainerGap(172, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel3)
-                .addGap(110, 110, 110)
+                .addGap(113, 113, 113)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -244,7 +243,7 @@ public class LandingFrame extends javax.swing.JFrame {
                 .addComponent(btnlogin)
                 .addGap(41, 41, 41)
                 .addComponent(jLabel8)
-                .addGap(71, 71, 71)
+                .addGap(32, 32, 32)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -258,8 +257,7 @@ public class LandingFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,7 +284,7 @@ public class LandingFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         String user = Username.getText();
         String pass = Password.getText();
-        if (user.equals("admin") && pass.equals("password")) {
+        if (user.equals("admin") && pass.equals("admin")) {
             //new Home().setVisible(true);
             //this.setVisible(false);
             new AdminDashboard().setVisible(true);
@@ -317,7 +315,7 @@ public class LandingFrame extends javax.swing.JFrame {
                 }
             }
         } catch (FileNotFoundException ex) {
-           // Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            // Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
 
@@ -339,7 +337,7 @@ public class LandingFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Inccorrect credentials. Please try again");
             }
         } catch (IOException ex) {
-            Logger.getLogger(LandingFrame.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Landing_Frame.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_btnloginActionPerformed
@@ -366,21 +364,35 @@ public class LandingFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LandingFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Landing_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LandingFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Landing_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LandingFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Landing_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LandingFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Landing_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LandingFrame().setVisible(true);
+                new Landing_Frame().setVisible(true);
             }
         });
     }

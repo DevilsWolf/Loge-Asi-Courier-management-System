@@ -4,8 +4,23 @@
  */
 package Cms;
 
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -80,6 +95,11 @@ public class CustomerDashboard extends javax.swing.JFrame {
         jLabel4.setText("Print your billing statements");
 
         jButton5.setText("Check");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -363,14 +383,14 @@ public class CustomerDashboard extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         new CourierTrackingGUI().setVisible(true);
-        
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         new ChatClientGUI().setVisible(true);
-        
+
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -382,8 +402,14 @@ public class CustomerDashboard extends javax.swing.JFrame {
         dialog.setVisible(true); // to visible the dialog
     }//GEN-LAST:event_jButton4ActionPerformed
 
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        Print_Billing_Statements.main(null);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
-     * @param args the command line arguments
+     * @param args the command line arguments4t
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -413,7 +439,7 @@ public class CustomerDashboard extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CustomerDashboard().setVisible(true);
-                
+
             }
         });
     }

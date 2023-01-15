@@ -376,6 +376,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         });
 
         jButton12.setText("Click");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -740,6 +745,15 @@ public class AdminDashboard extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane optionPane = new JOptionPane("This function is not working", JOptionPane.WARNING_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Warning!");
+        dialog.setAlwaysOnTop(true); // to show top of all other application
+        dialog.setVisible(true); // to visible the dialog
+
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments

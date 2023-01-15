@@ -1,9 +1,5 @@
 package Cms;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 import java.awt.Dimension;
 import javax.swing.*;
 
@@ -214,7 +210,7 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new LandingFrame().setVisible(true);
+        new Landing_Frame().setVisible(true);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

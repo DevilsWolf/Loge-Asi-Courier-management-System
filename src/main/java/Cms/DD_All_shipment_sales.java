@@ -54,7 +54,7 @@ public class DD_All_shipment_sales {
                 Student student = new Student();
                 student.setName(splitData[0]);
                 student.setproduct_type(splitData[4]);
-                student.setamount(splitData[8]);
+                student.setamount(splitData[9]);
 
                 studentList.add(student);
             }

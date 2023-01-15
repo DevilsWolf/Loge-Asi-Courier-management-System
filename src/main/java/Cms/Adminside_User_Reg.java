@@ -284,7 +284,7 @@ public class Adminside_User_Reg extends javax.swing.JFrame {
         mod.addColumn("Contact No.");
 
         try {
-            BufferedReader bfw = new BufferedReader(new FileReader("UserData.txt"));
+            BufferedReader bfw = new BufferedReader(new FileReader("UserData2.txt"));
             while ((line = bfw.readLine()) != null) {
                 mod.addRow(line.split(","));
             }

@@ -1,1 +1,4 @@
-Sourav Roy,sourav4068@gmail.com,Basabo Dhaka-1214,Rajshahi,Furnisher,,25,Van,5000.0,7283
+Rion,rion@gmail.com,basabo,Rajshahi,Furnisher,,25,Bike,5000.0,2351
+Rohan Mondal,rohan@gmail.com,mirpur,basabo,Electronic Device,,2,Bike,80.0,9772
+Sourav Roy,sourav@4068@gmail.com,basabo,china,Electronic Device,,1,Van,80.0,4326
+wasty,wasty@gmail.com,dhaka,chandpur,Clothing,,5,Van,60.0,6112

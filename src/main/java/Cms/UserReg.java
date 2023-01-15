@@ -5,6 +5,7 @@
 package Cms;
 
 import java.awt.Component;
+import static java.awt.SystemColor.text;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -266,11 +267,31 @@ public class UserReg extends javax.swing.JFrame {
         FileWriter fw = new FileWriter(f, true);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter pw = new PrintWriter(bw);
-        pw.println(username.getText() + "," + email.getText() + "," + password.getText() + "," + homeaddr.getText() + "," + contactno.getText());
+        pw.println(id + "," + username.getText() + "," + email.getText() + "," + password.getText() + "," + homeaddr.getText() + "," + contactno.getText());
         //id + "," + 
         pw.flush();
         pw.close();
         bw.close();
+        File f2 = new File("UserData2.txt");
+        if (!f2.exists()) {
+            f2.createNewFile();
+        }
+        BufferedReader br1 = new BufferedReader(new FileReader(f));
+        Object[] Lines1 = br.lines().toArray();
+        int i1 = 0;
+        int id1 = 0;
+        FileWriter fw2 = new FileWriter(f2, false);
+        BufferedWriter bw2 = new BufferedWriter(fw2);
+        PrintWriter pw2 = new PrintWriter(bw2);
+        for (i = 0; i < Lines.length; i++) {
+            String Line = Lines[i].toString().trim();
+            String[] Row = Line.split(",");
+            pw2.println(Row[1] + "," + Row[2] + "," + Row[3] + "," + Row[4] + "," + Row[5]);
+        }
+        pw2.flush();
+        pw2.close();
+        bw2.close();
+
     }
 
     /**

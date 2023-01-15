@@ -29,10 +29,8 @@ public class Dynamic_db extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -45,10 +43,6 @@ public class Dynamic_db extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(44, 62, 80));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Total Shipments");
-
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Our Delivery Hub Locations");
@@ -56,8 +50,6 @@ public class Dynamic_db extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Verdana", 3, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
         jLabel5.setText("Dynamic Dashboard");
-
-        jButton1.setText("Shipments");
 
         jButton5.setText("Locations");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -110,46 +102,40 @@ public class Dynamic_db extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
                     .addComponent(jLabel3)
                     .addComponent(jButton5)
-                    .addComponent(jButton6)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel1))
+                    .addComponent(jButton9)
+                    .addComponent(jLabel17))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton9)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel7)
-                    .addComponent(jButton7))
-                .addGap(100, 100, 100))
+                    .addComponent(jLabel6)
+                    .addComponent(jButton6)
+                    .addComponent(jButton7)
+                    .addComponent(jLabel7))
+                .addGap(114, 114, 114))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel5)
-                .addGap(38, 38, 38)
+                .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(jLabel7)
                     .addComponent(jLabel17))
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
-                    .addComponent(jButton1))
-                .addGap(29, 29, 29)
+                    .addComponent(jButton7))
+                .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                    .addComponent(jLabel6))
+                .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
-                    .addComponent(jButton7))
-                .addGap(35, 35, 35)
-                .addComponent(jLabel6)
-                .addGap(37, 37, 37)
-                .addComponent(jButton6)
-                .addGap(96, 96, 96))
+                    .addComponent(jButton6))
+                .addGap(162, 162, 162))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -162,7 +148,7 @@ public class Dynamic_db extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+            .addGap(0, 490, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -281,12 +267,10 @@ public class Dynamic_db extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;

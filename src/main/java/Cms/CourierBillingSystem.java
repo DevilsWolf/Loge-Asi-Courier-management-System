@@ -233,7 +233,7 @@ public class CourierBillingSystem extends JFrame implements ActionListener {
                 fw.close();
                 FileWriter fw2 = new FileWriter("bill2.txt", true);
                 BufferedWriter bw2 = new BufferedWriter(fw2);
-                bw2.write(fullName + "," + email + "," + pickupLocation + "," + deliveryLocation + "," + productType + "," + weight + "," + modeOfTransport + "," + total + "," + var1);
+                bw2.write("\n" + fullName + "," + email + "," + pickupLocation + "," + deliveryLocation + "," + productType + "," + weight + "," + modeOfTransport + "," + total + "," + var1);
                 //"\n" +
                 bw2.close();
                 fw2.close();
@@ -241,7 +241,7 @@ public class CourierBillingSystem extends JFrame implements ActionListener {
                 //Experimental Code ahead
                 FileWriter fw3 = new FileWriter("billformat.txt", true);
                 BufferedWriter bw3 = new BufferedWriter(fw3);
-                bw3.write(fullName + "," + email + "," + pickupLocation + "," + deliveryLocation + "," + productType + "," + weight + "," + modeOfTransport + "," + total + "," + var1 + "," + "In Transit and out for delivery");
+                bw3.write("\n" + fullName + "," + email + "," + pickupLocation + "," + deliveryLocation + "," + productType + "," + weight + "," + modeOfTransport + "," + total + "," + var1 + "," + "In Transit and out for delivery");
                 //"\n" + 
                 bw3.close();
                 fw3.close();
