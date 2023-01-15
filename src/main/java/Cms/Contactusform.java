@@ -172,7 +172,7 @@ public class Contactusform extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             setData();
-            JOptionPane.showMessageDialog(this, "User Registration succsessful");
+            JOptionPane.showMessageDialog(this, "Message sent to Admin He will reach you shortly");
         } catch (IOException ex) {
             Logger.getLogger(Contactusform.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -266,7 +266,8 @@ public class UserReg extends javax.swing.JFrame {
         FileWriter fw = new FileWriter(f, true);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter pw = new PrintWriter(bw);
-        pw.println(id + "," + username.getText() + "," + email.getText() + "," + password.getText() + "," + homeaddr.getText() + "," + contactno.getText());
+        pw.println(username.getText() + "," + email.getText() + "," + password.getText() + "," + homeaddr.getText() + "," + contactno.getText());
+        //id + "," + 
         pw.flush();
         pw.close();
         bw.close();

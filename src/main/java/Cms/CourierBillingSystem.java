@@ -233,18 +233,20 @@ public class CourierBillingSystem extends JFrame implements ActionListener {
                 fw.close();
                 FileWriter fw2 = new FileWriter("bill2.txt", true);
                 BufferedWriter bw2 = new BufferedWriter(fw2);
-                bw2.write("\n" + fullName + "," + email + "," + pickupLocation + "," + deliveryLocation + "," + productType + "," + weight + "," + modeOfTransport + "," + total + "," + var1);
+                bw2.write(fullName + "," + email + "," + pickupLocation + "," + deliveryLocation + "," + productType + "," + weight + "," + modeOfTransport + "," + total + "," + var1);
+                //"\n" +
                 bw2.close();
                 fw2.close();
 
                 //Experimental Code ahead
-                //FileWriter fw3 = new FileWriter("BillType.txt", true);
-                //BufferedWriter bw3 = new BufferedWriter(fw3);
-                //bw3.write("\n" + fullName + "/" + email + "/" + pickupLocation + "/" + deliveryLocation + "/" + productType + "/" + weight + "/" + modeOfTransport + "/" + total + "/" + var1);
-                //bw3.close();
-                //fw3.close();
+                FileWriter fw3 = new FileWriter("billformat.txt", true);
+                BufferedWriter bw3 = new BufferedWriter(fw3);
+                bw3.write(fullName + "," + email + "," + pickupLocation + "," + deliveryLocation + "," + productType + "," + weight + "," + modeOfTransport + "," + total + "," + var1 + "," + "In Transit and out for delivery");
+                //"\n" + 
+                bw3.close();
+                fw3.close();
                 //Experimental Code finished
-                JOptionPane.showMessageDialog(null, "Generated Successfully");
+                JOptionPane.showMessageDialog(null, "Generated Successfully \nYour Tracking id : " + var1);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -293,21 +295,21 @@ public class CourierBillingSystem extends JFrame implements ActionListener {
             case 4:
                 name = "Shafiqul Islam";
                 break;
-            //case 5:
-            //name = "Steven";
-            //break;
-            //case 6:
-            //name = "Tom";
-            //break;
-            //case 7:
-            //name = "Michael";
-            //break;
-            //case 8:
-            //name = "Joseph";
-            //break;
-            //case 9:
-            //name = "Richard";
-            //break;
+            case 5:
+                name = "Steven";
+                break;
+            case 6:
+                name = "Tom";
+                break;
+            case 7:
+                name = "Michael";
+                break;
+            case 8:
+                name = "Joseph";
+                break;
+            case 9:
+                name = "Richard";
+                break;
         }
         return name;
     }
